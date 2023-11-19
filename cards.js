@@ -103,11 +103,11 @@ export const createCard = (value, color) => {
 export const setHand = () => {
     let hand = []
     for(let i = 0; i < 7; i++) {
-        const random = Math.floor(Math.random() * deck.length)
-        let number = deck.splice(random,1)[0]
+        const random = Math.floor(Math.random() * DECK.length)
+        let number = DECK.splice(random,1)[0]
         hand.push(number)
     }
     return hand
 }
 
-export const deck = cardFactory()
+export let DECK = cardFactory()
